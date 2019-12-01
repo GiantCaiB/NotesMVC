@@ -1,0 +1,86 @@
+2019-12-01 02:15:01.5516|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 02:15:09.2200|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 02:15:17.9103|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Delete request is received wtih id:3.
+2019-12-01 02:15:17.9192|DEBUG|UI.Controllers.CallNotesController|Found the call note with id:3
+2019-12-01 02:15:19.6847|INFO|UI.Controllers.CallNotesController|The call note with id:3 has been deleted from DB.
+2019-12-01 02:15:19.6847|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 02:15:22.0123|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Create request is received.
+2019-12-01 02:15:25.9969|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 02:15:32.3562|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Create request is received.
+2019-12-01 02:15:37.5488|DEBUG|UI.Controllers.CallNotesController|POST: CallNote - Create request is received with call note => Parent Id:4, Customer Id:1, Content:, Created Date:.
+2019-12-01 02:15:37.5608|INFO|UI.Controllers.CallNotesController|call note => Parent Id:4, Customer Id:1, Content:, Created Date:01-Dec-19 2:15:37 AM is added into DB.
+2019-12-01 02:15:37.5608|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 02:15:40.5798|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Delete request is received wtih id:31616373.
+2019-12-01 02:15:40.5798|DEBUG|UI.Controllers.CallNotesController|Found the call note with id:31616373
+2019-12-01 02:15:42.1700|INFO|UI.Controllers.CallNotesController|The call note with id:31616373 has been deleted from DB.
+2019-12-01 02:15:42.1700|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 02:15:44.2780|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 02:15:48.8362|DEBUG|UI.Controllers.CustomersController|GET: Customer - Delete request is received wtih id:4.
+2019-12-01 02:15:48.8412|DEBUG|UI.Controllers.CustomersController|Found the customer with id:4
+2019-12-01 02:15:53.8047|INFO|UI.Controllers.CustomersController|The customer with id:4 has been deleted from DB.
+2019-12-01 02:15:53.8147|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 02:15:57.6451|DEBUG|UI.Controllers.CustomersController|GET: Customer - Edit request is received wtih id:2.
+2019-12-01 02:15:57.6451|DEBUG|UI.Controllers.CustomersController|Found the customer with id:2
+2019-12-01 02:16:10.4858|DEBUG|UI.Controllers.CustomersController|POST: Customer - Edit request is received with customer => Username:Elmottt, First Name:Aomeng, Last Name:Zhang, Phone Number:0432564990, Date of Birth:12-Nov-99 12:00:00 AM.
+2019-12-01 02:16:10.5243|INFO|UI.Controllers.CustomersController|customer => Username:Elmottt, First Name:Aomeng, Last Name:Zhang, Phone Number:0432564990, Date of Birth:12-Nov-99 12:00:00 AM is updated into DB.
+2019-12-01 02:16:10.5323|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 02:16:14.8807|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 02:16:16.7491|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 10:20:47.9653|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 10:20:55.3108|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 10:21:16.6862|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Create request is received.
+2019-12-01 10:21:34.1181|DEBUG|UI.Controllers.CallNotesController|POST: CallNote - Create request is received with call note => Id:385544574, Parent Id:6, Customer Id:1, Content:His email: giantcaib@hotmail.com, Created Date:.
+2019-12-01 10:21:34.1381|INFO|UI.Controllers.CallNotesController|call note => Id:385544574, Parent Id:6, Customer Id:1, Content:His email: giantcaib@hotmail.com, Created Date:01-Dec-19 10:21:34 AM is added into DB.
+2019-12-01 10:21:34.1381|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 10:21:37.6221|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 10:22:50.6074|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 10:23:06.9700|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 10:23:09.9702|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 10:23:12.3727|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 15:16:59.5803|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 18:06:52.1671|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:19:13.7723|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:19:33.0979|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 19:19:39.8424|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:23:43.9475|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:24:19.9090|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 19:24:22.5308|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:24:27.9409|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 19:26:35.3178|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:26:43.2216|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 19:26:47.5984|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Create request is received.
+2019-12-01 19:26:49.9006|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 19:26:51.3964|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:26:54.0870|DEBUG|UI.Controllers.CustomersController|GET: Customer - Edit request is received wtih id:1.
+2019-12-01 19:26:54.0910|DEBUG|UI.Controllers.CustomersController|Found the customer with id:1
+2019-12-01 19:26:58.6308|DEBUG|UI.Controllers.CustomersController|POST: Customer - Edit request is received with BOL.Customer.
+2019-12-01 19:26:58.6917|ERROR|BLL.Service`1|Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+2019-12-01 19:27:50.5336|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:28:17.0704|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 19:29:46.9205|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:29:53.1415|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 19:30:22.2160|DEBUG|UI.Controllers.CustomersController|POST: Customer - Create request is received with BOL.Customer.
+2019-12-01 19:30:22.2657|ERROR|BLL.Service`1|Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+2019-12-01 19:30:22.2828|ERROR|BLL.CustomerService|Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+2019-12-01 19:46:35.2210|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 19:46:41.0042|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 20:01:06.7126|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 20:01:12.7979|DEBUG|UI.Controllers.CallNotesController|GET: CallNote - Index request is received with customer id:1
+2019-12-01 20:01:14.8176|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 20:01:17.0557|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 20:02:12.9901|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 20:02:18.0602|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 20:02:29.1722|DEBUG|UI.Controllers.CustomersController|POST: Customer - Create request is received with BOL.Customer.
+2019-12-01 20:02:29.1722|DEBUG|UI.Controllers.CustomersController|username is not valid.
+2019-12-01 20:02:29.1722|DEBUG|UI.Controllers.CustomersController|first_name is not valid.
+2019-12-01 20:07:33.0087|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 20:07:42.1829|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|POST: Customer - Create request is received with BOL.Customer.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|POST: Customer - Create request is received with BOL.Customer.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|username is not valid.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|username is not valid.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|first_name is not valid.
+2019-12-01 20:07:56.4617|DEBUG|UI.Controllers.CustomersController|first_name is not valid.
+2019-12-01 20:27:03.0254|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:
+2019-12-01 20:27:09.8124|DEBUG|UI.Controllers.CustomersController|GET: Customer - Create request is received.
+2019-12-01 20:27:24.4223|DEBUG|UI.Controllers.CustomersController|GET: Customer - Index request is received with searchString:

@@ -1,0 +1,50 @@
+﻿@model BOL.CallNote
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CallNote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.text_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.text_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CallNote2.text_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CallNote2.text_content)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

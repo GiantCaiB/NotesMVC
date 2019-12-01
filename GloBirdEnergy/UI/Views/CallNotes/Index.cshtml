@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BOL.CallNote>
+
+@{
+	ViewBag.Title = "Call Notes Information";
+	ViewBag.Username = Model.FirstOrDefault().Customer.username;
+}
+
+<h2>Call Notes of Customer - @ViewBag.Username</h2>
+
+<p>
+	@Html.ActionLink("Create New Issue", "Create", new { customerId = ViewBag.CustomerId, parentId = (int?)null })
+</p>
+
+<div class="callNotesView">
+	@if (Model != null && Model.Count() > 0)
+	{
+		var roots = Model.Where(r => r.parent_id == null);
+		foreach (var root in roots.OrderBy(r => r.date_created))
+		{
+			<ul>
+				@DisplayCallNotes(Model.OrderBy(r => r.date_created), root)
+			</ul>
+		}
+	}
+</div>
+
+
+<div>
+	@Html.ActionLink("Back to Customers", "Index", "Customers", new { searchString = "" }, null)
+</div>
+
+
+@helper DisplayCallNotes(IEnumerable<BOL.CallNote> nodes, BOL.CallNote root)
+{
+<li>
+	<span>
+		@root.text_content
+		@Html.ActionLink("Add Child", "Create", new { customerId = ViewBag.CustomerId, parentId = root.id }) |
+		@Html.ActionLink("Edit", "Edit", new { id = root.id }) |
+		@Html.ActionLink("Delete", "Delete", new { id = root.id })
+	</span>
+	@{var children = nodes.Where(c => c.parent_id == root.id);}
+	@if (children.Count() > 0)
+	{
+		<span class="collapse collapsible">&nbsp;</span>
+		foreach (var child in children.OrderBy(r => r.date_created))
+		{
+			<ul>
+				@DisplayCallNotes(nodes.Where(c=> c.parent_id == child.id).OrderBy(r => r.date_created), child)
+			</ul>
+		}
+	}
+	else
+	{
+		<span style="width:15px; display:inline-block">&nbsp;</span>
+	}
+</li>
+}

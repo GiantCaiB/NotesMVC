@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GloBirdModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CallNote">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="parent_id" Type="int" />
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="text_content" Type="varchar" MaxLength="140" />
+          <Property Name="date_created" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="first_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="date_of_birth" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__CallNote__custom__73BA3083">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="CallNote" Type="Self.CallNote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CallNote">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CallNote__parent__72C60C4A">
+          <End Role="CallNote" Type="Self.CallNote" Multiplicity="0..1" />
+          <End Role="CallNote1" Type="Self.CallNote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CallNote">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CallNote1">
+              <PropertyRef Name="parent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GloBirdModelStoreContainer">
+          <EntitySet Name="CallNote" EntityType="Self.CallNote" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CallNote__custom__73BA3083" Association="Self.FK__CallNote__custom__73BA3083">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="CallNote" EntitySet="CallNote" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CallNote__parent__72C60C4A" Association="Self.FK__CallNote__parent__72C60C4A">
+            <End Role="CallNote" EntitySet="CallNote" />
+            <End Role="CallNote1" EntitySet="CallNote" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GloBirdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CallNote">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="parent_id" Type="Int32" />
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="text_content" Type="String" MaxLength="140" FixedLength="false" Unicode="false" />
+          <Property Name="date_created" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__CallNote__custom__73BA3083" FromRole="CallNote" ToRole="Customer" />
+          <NavigationProperty Name="CallNote1" Relationship="Self.FK__CallNote__parent__72C60C4A" FromRole="CallNote" ToRole="CallNote1" />
+          <NavigationProperty Name="CallNote2" Relationship="Self.FK__CallNote__parent__72C60C4A" FromRole="CallNote1" ToRole="CallNote" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="date_of_birth" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="CallNotes" Relationship="Self.FK__CallNote__custom__73BA3083" FromRole="Customer" ToRole="CallNote" />
+        </EntityType>
+        <Association Name="FK__CallNote__custom__73BA3083">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="CallNote" Type="Self.CallNote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CallNote">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CallNote__parent__72C60C4A">
+          <End Role="CallNote" Type="Self.CallNote" Multiplicity="0..1" />
+          <End Role="CallNote1" Type="Self.CallNote" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CallNote">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CallNote1">
+              <PropertyRef Name="parent_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GloBirdEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CallNotes" EntityType="Self.CallNote" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <AssociationSet Name="FK__CallNote__custom__73BA3083" Association="Self.FK__CallNote__custom__73BA3083">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="CallNote" EntitySet="CallNotes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CallNote__parent__72C60C4A" Association="Self.FK__CallNote__parent__72C60C4A">
+            <End Role="CallNote" EntitySet="CallNotes" />
+            <End Role="CallNote1" EntitySet="CallNotes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GloBirdModelStoreContainer" CdmEntityContainer="GloBirdEntities">
+          <EntitySetMapping Name="CallNotes">
+            <EntityTypeMapping TypeName="GloBirdModel.CallNote">
+              <MappingFragment StoreEntitySet="CallNote">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="text_content" ColumnName="text_content" />
+                <ScalarProperty Name="date_created" ColumnName="date_created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="GloBirdModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

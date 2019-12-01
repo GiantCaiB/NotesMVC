@@ -1,0 +1,2 @@
+DROP TABLE CallNote;
+DROP TABLE Customer;

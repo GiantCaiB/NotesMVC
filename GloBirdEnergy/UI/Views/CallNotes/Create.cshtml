@@ -1,0 +1,43 @@
+﻿@model BOL.CallNote
+
+@{
+	ViewBag.Title = "Create";
+}
+
+<h2>Create node for parent @Model.parent_id from Customer - @Model.Customer.username</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+	<h4>CallNote Console: @Html.DisplayFor(model => model.id)</h4>
+	<hr />
+	<div class="form-group">
+		<div hidden="hidden">
+			@Html.EditorFor(model => model.customer_id)
+			@Html.EditorFor(model => model.id)
+			@Html.EditorFor(model => model.parent_id)
+		</div>
+		@Html.LabelFor(model => model.text_content, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.text_content, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.text_content, "", new { @class = "text-danger" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Create" class="btn btn-default" />
+		</div>
+	</div>
+</div>
+}
+
+<div>
+	@Html.ActionLink("Back to Call Notes Information", "Index", new { customerId = Model.Customer.id })
+</div>
+	@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+	}
